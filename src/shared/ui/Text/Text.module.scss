@@ -1,20 +1,13 @@
-.title {
-        color: var(--primary-color);
+.no-theme {
+    color: #ffffff;  
 }
-
-.text {
-    color: var(--primary-color);
-}
-
-.inverted {
-    .title {
-        color: var(--inverted-primary-color);
-    }
+.theme {
+    .title,
     .text {
-        color: var(--inverted-secondary-color);
+        color: var(--primary-color);
     }
 }
-
+    
 .center {
     text-align: center;
 }

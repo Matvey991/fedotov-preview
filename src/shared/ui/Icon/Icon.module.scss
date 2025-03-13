@@ -1,11 +1,12 @@
 .Icon {
+    color: #ffffff;
+    fill: #ffffff;
     cursor: pointer;
-    color: var(--primary-color);
-    fill: var(--primary-color);
     transition: ease 0.2s;
 }
 
 .Icon:hover {
+    color: #7545C3;
     fill: #7545C3;
 }
 

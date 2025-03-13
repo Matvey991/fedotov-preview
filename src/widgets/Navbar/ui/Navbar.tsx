@@ -20,29 +20,33 @@ export const Navbar = memo((props: NavbarProps) => {
     const { className } = props
 
     return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
-            <HStack className={cls.logo} align='center'>
+        <HStack
+            align='center'
+            justify='between'
+            className={classNames(cls.Navbar, {}, [className])}
+        >
+            <HStack className={cls.logo}>
                 <Icon size={IconSize.M} Svg={FedotovLogo} />
-                <Text size={TextSize.M} text='EDOTOV' />
+                <Text size={TextSize.M} text='EDOTOV' noneTheme />
             </HStack>
             <HStack align='center'>
-                <Button size={ButtonSize.L}>
+                <Button>
                     ОБО МНЕ
                 </Button>
-                <Button size={ButtonSize.L}>
+                <Button>
                     ПРОЕКТЫ
                 </Button>
-                <Button size={ButtonSize.L}>
+                <Button>
                     НАВЫКИ
                 </Button>
-                <Button size={ButtonSize.L}>
+                <Button>
                     ОБУЧЕНИЕ
                 </Button>
-                <Button size={ButtonSize.L}>
+                <Button>
                     КОНТАКТЫ
                 </Button>
-                <ThemeSwitcher />
             </HStack>
-        </div>
+            <ThemeSwitcher />
+        </HStack>
     );
 });

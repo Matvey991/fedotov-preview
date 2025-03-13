@@ -15,14 +15,19 @@ export enum ButtonSize {
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    children: ReactNode;
     theme?: ButtonTheme;
     size?: ButtonSize;
 }
 
 export const Button = memo((props: ButtonProps) => {
 
-    const { className, children, theme = ButtonTheme.OUTLINE_WHITE, size = ButtonSize.M } = props
+    const {
+        className,
+        children,
+        theme = ButtonTheme.OUTLINE_WHITE,
+        size = ButtonSize.M,
+        ...otherProps
+    } = props
 
     const additional: Array<string | undefined> = [
         className,
@@ -32,7 +37,11 @@ export const Button = memo((props: ButtonProps) => {
 
 
     return (
-        <button className={classNames(cls.Button, {}, additional)}>
+        <button
+            type="button"
+            className={classNames(cls.Button, {}, additional)}
+            {...otherProps}
+        >
             {children}
         </button>
     );

@@ -1,5 +1,9 @@
-:root {
+.app_light_theme {
     --bg-color: #ffffff;
-    --inverted-bg-color: #000000;   
-    --primary-color: #ffffff;
+
+    --primary-color: #000000;
+    --secondary-color: rgb(39, 38, 38);
+    
+    --shadow-projectCard-color: rgba(0, 10, 255, 0.3490196078);
 }
+

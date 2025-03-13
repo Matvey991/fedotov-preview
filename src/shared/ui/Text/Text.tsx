@@ -4,7 +4,6 @@ import cls from './Text.module.scss';
 
 export enum TextTheme {
     PRIMARY = 'primary',
-    INVERTED = 'inverted',
 }
 
 export enum TextAlign {
@@ -27,6 +26,7 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
+    noneTheme?: boolean;
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3';
@@ -46,15 +46,16 @@ export const Text = memo((props: TextProps) => {
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
         size = TextSize.M,
+        noneTheme,
     } = props;
 
     const HeaderTag = mapSizeToHeaderTag[size];
 
     const additional = [
         className,
-        cls[theme],
         cls[align],
         cls[size],
+        noneTheme ? cls['no-theme'] : cls[theme],
     ];
 
     return (

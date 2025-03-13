@@ -1,8 +1,8 @@
 import { MainPage } from "@/pages"
 import { Navbar } from "@/widgets/Navbar"
 import './styles/index.scss'
-import { classNames } from "@/shared/lib/classNames/classNames"
 import { useTheme } from "@/shared/hooks/useTheme/useTheme"
+import { classNames } from "@/shared/lib/classNames/classNames"
 
 function App() {
 

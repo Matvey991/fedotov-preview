@@ -8,18 +8,13 @@
         "jsx": "react-jsx",
         "allowJs": true,
         "strict": true,
-        "moduleResolution": "node",
-        "baseUrl": ".",
+        "moduleResolution": "bundler",
+        "baseUrl": "./src",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["*"]
         },
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "isolatedModules": true
-    },
-    "ts-node": {
-        "compilerOptions": {
-            "module": "CommonJS"
-        }
     }
 }

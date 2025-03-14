@@ -23,6 +23,6 @@
 .image {
     overflow: hidden;
     object-fit: cover;
-    box-shadow: 0px 0px 60px 40px var(--shadow-projectCard-color);
+    box-shadow: 0px 0px 60px 40px  rgba(52, 1, 255, 0.83);
     filter: brightness(0.5);
 }

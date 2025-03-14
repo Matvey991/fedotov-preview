@@ -2,14 +2,14 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
 import cls from './Navbar.module.scss'
 import FedotovLogo from '../../../shared/assets/icons/FedotovIcon.svg';
-import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import { TextSize } from '@/shared/ui/Text/Text';
-import { IconSize } from '@/shared/ui/Icon/Icon';
 import { HStack } from '@/shared/ui/Stack';
 import { Button } from '@/shared/ui/Button';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
-import { ButtonSize } from '@/shared/ui/Button/Button';
+import { Icon } from '@/shared/ui/Icon';
+import { useTranslation } from 'react-i18next';
+// import { IconSize } from '@/shared/ui/Icon/Icon';
 
 interface NavbarProps {
     className?: string;
@@ -17,6 +17,7 @@ interface NavbarProps {
 
 export const Navbar = memo((props: NavbarProps) => {
 
+    const { t } = useTranslation()
     const { className } = props
 
     return (
@@ -26,24 +27,25 @@ export const Navbar = memo((props: NavbarProps) => {
             className={classNames(cls.Navbar, {}, [className])}
         >
             <HStack className={cls.logo}>
-                <Icon size={IconSize.M} Svg={FedotovLogo} />
+                {/* <Icon size={IconSize.M} Svg={FedotovLogo} /> */}
+                {/* <Icon Svg={FedotovLogo} /> */}
                 <Text size={TextSize.M} text='EDOTOV' noneTheme />
             </HStack>
             <HStack align='center'>
                 <Button>
-                    ОБО МНЕ
+                    {t('ОБО МНЕ')}
                 </Button>
                 <Button>
-                    ПРОЕКТЫ
+                    {t('ПРОЕКТЫ')}
                 </Button>
                 <Button>
-                    НАВЫКИ
+                    {t('НАВЫКИ')}
                 </Button>
                 <Button>
-                    ОБУЧЕНИЕ
+                    {t('ОБУЧЕНИЕ')}
                 </Button>
                 <Button>
-                    КОНТАКТЫ
+                    {t('КОНТАКТЫ')}
                 </Button>
             </HStack>
             <ThemeSwitcher />

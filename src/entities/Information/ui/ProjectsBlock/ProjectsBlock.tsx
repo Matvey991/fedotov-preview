@@ -1,26 +1,26 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
-import cls from './Projects.module.scss'
 import { VStack } from '@/shared/ui/Stack';
 import { ProjectCard } from '@/shared/ui/ProjectCard/ProjectCard';
 import { Text } from '@/shared/ui/Text';
 import { TextSize } from '@/shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectsProps {
     className?: string;
 }
 
-export const Projects = memo((props: ProjectsProps) => {
-
+export const ProjectsBlock = memo((props: ProjectsProps) => {
+    const { t } = useTranslation()
     const { className } = props
     return (
         <VStack
             gap='64'
             align='center'
-            className={classNames(cls.Projects, {}, [className])}
+            className={classNames('', {}, [className])}
         >
             <Text
-                text='Проекты'
+                text={t('Проекты')}
                 size={TextSize.L}
             />
             <VStack gap='64' >

@@ -14,9 +14,10 @@
     background-color: none;
     outline: none;
     cursor: pointer;
-    
-}
+    color: var(--text-color-white);
+    transition: all 0.2s;
 
-.clear_outline {
-
+    &:hover {
+        color: var(--hover-color);
+    }
 }

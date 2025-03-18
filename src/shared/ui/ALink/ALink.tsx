@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo, ReactNode } from 'react';
 import cls from './ALink.module.scss'
 
-type AlinkTheme = 'outline' | 'clear' | 'clear_outline'
+type AlinkTheme = 'outline' | 'clear'
 
 interface ALinkProps {
     className?: string;

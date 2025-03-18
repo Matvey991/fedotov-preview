@@ -25,7 +25,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
         )
         const arr2 = (
             <Text
-                size='size_xl'
+                size='size_l'
                 theme='white'
                 title={t('Фронтенд разработчик')}
                 fontWeight='weight_300'
@@ -33,7 +33,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
         )
         const arr3 = (
             <Text
-                size='size_xl'
+                size='size_l'
                 theme='white'
                 title={t('с 2-х летнем опытом.')}
                 fontWeight='weight_300'

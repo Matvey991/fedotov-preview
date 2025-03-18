@@ -3,8 +3,11 @@ import { memo } from 'react';
 import cls from './Footer.module.scss'
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Button } from '@/shared/ui/Button';
-import { Text } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
+import { footerData } from '../model/data/data';
+import { ButtonSize } from '@/shared/ui/Button/Button';
+import { Text } from '@/shared/ui/Text';
+import { ALink } from '@/shared/ui/ALink';
 
 interface FooterProps {
     className?: string;
@@ -15,29 +18,41 @@ export const Footer = memo((props: FooterProps) => {
     const { className } = props
 
     return (
-        <VStack
-            gap='32'
-            justify='center'
-            align='center'
-            className={classNames(cls.Footer, {}, [className])}
-        >
-            <Text
-                title={t('Контакты')}
-            />
-            <HStack
-                justify='between'
+        <div className={classNames(cls.Footer, {}, [className])}>
+            <VStack
+                gap='64'
+                justify='center'
                 align='center'
             >
-                <Button>
-                    Telegramm
-                </Button>
-                <Button>
-                    Telegramm
-                </Button>
-                <Button>
-                    Telegramm
-                </Button>
-            </HStack>
-        </VStack>
+                <Text
+                    size='size_xl'
+                    fontWeight='weight_500'
+                    title={t('Контакты')}
+                />
+                <HStack
+                    align='center'
+                >
+                    {footerData.map((el) => (
+                        <HStack
+                            justify='center'
+                            align='center'
+                            key={el.href}
+                        >
+                            <ALink
+                                theme='clear'
+                                href={el.href}
+                                target='_blank'
+                            >
+                                <Text
+                                    title={el.text}
+                                    fontWeight='weight_300'
+                                    size='size_l'
+                                />
+                            </ALink>
+                        </HStack>
+                    ))}
+                </HStack>
+            </VStack>
+        </div>
     );
 });

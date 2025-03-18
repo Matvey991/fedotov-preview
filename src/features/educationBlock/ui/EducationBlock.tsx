@@ -4,9 +4,9 @@ import { memo } from 'react';
 import cls from './EducationBlock.module.scss'
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import { educationData } from '../model/data/EducationData';
 import { AppImage } from '@/shared/ui/AppImage';
 import { ALink } from '@/shared/ui/ALink';
+import { educationData } from '../model/data/educationData';
 
 interface EducationBlockBlockProps {
     className?: string;
@@ -21,8 +21,11 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
             <VStack
                 align='center'
                 justify='center'
+                gap='64'
             >
                 <Text
+                    size='size_xl'
+                    fontWeight='weight_500'
                     title={t('Обучение')}
                 />
                 <HStack
@@ -32,16 +35,17 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
                 >
                     {educationData.map((el) => (
                         <HStack
-                            gap='8'
+                            key={el.img}
                             justify='center'
                             align='center'
                         >
                             <ALink
                                 theme='clear'
                                 href={el.link}
+                                target='_blank'
                             >
                                 <AppImage
-                                    height={300}
+                                    height={265}
                                     src={el.img}
                                 />
                             </ALink>

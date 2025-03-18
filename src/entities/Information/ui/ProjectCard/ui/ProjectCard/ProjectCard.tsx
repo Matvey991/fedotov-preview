@@ -50,7 +50,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         src={img}
                         width={700}
                         height={370}
-                        opaticy='opaticy0_5'
+                        opaticy='opaticy0_3'
                     />
                 </VStack>
             </div>
@@ -85,7 +85,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                     src={img}
                     width={700}
                     height={370}
-                    opaticy='opaticy0_5'
+                    opaticy='opaticy0_3'
                 />
             </VStack>
         </div>

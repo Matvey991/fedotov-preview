@@ -6,7 +6,7 @@ export const educationData: EducationType[] = [
         link: 'https://ulbitv.ru/frontend',
     },
     {
-        img: 'https://sun9-43.userapi.com/impg/znLzglkIf9PYuGnOe1Ch3Sc7XSYrD4kfn2zr9g/Dhzx2hRG5SU.jpg?size=840x1174&quality=95&sign=51a1c5fd3f32390556af2afd8e588be6&type=album',
+        img: 'https://sun9-44.userapi.com/impg/_o0KWaGLUhPFBC5qGn1H_Z65KvkBrV8ql8W5LA/VY3opZT--nM.jpg?size=820x1164&quality=95&sign=4b43ef177e1bdf2bd7a1619df8eca0a7&type=album',
         link: 'https://habr.com/ru/companies/piter/articles/463465/',
     },
     {

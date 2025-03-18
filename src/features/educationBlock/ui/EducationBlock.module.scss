@@ -1,4 +1,19 @@
-.education {
-    max-width: 100vw;
-    overflow-x: scroll;
+.EducationBlock {
+    padding: 98px 0;
+    position: relative;
+    color: var(--primary-color);
+
+    &:hover {
+        .hashtag {
+            color: var(--hover-color);
+            user-select: none; 
+        }
+    }
+}
+
+
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
 }

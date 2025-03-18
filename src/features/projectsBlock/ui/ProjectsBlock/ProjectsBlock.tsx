@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { VStack } from '@/shared/ui/Stack';
+import { HStack, VStack } from '@/shared/ui/Stack';
 import { ProjectCard } from '@/entities/Information/ui/ProjectCard';
 import { Text } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
@@ -16,16 +16,29 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
     const { className } = props
 
     return (
-        <VStack>
+        <VStack className={classNames(cls.ProjectsBlock, {}, [className])}>
             <VStack
                 align='center'
                 gap='64'
             >
-                <Text
-                    size='size_xl'
-                    fontWeight='weight_500'
-                    title={t('Проекты')}
-                />
+                <HStack
+                    align='center'
+                    justify='center'
+                    max
+                    gap='16'
+                >
+                    <Text
+                        size='size_xl'
+                        fontWeight='weight_500'
+                        title={t('Проекты')}
+                    />
+                    <Text
+                        size='size_xl'
+                        fontWeight='weight_500'
+                        title='#'
+                        className={cls.hashtag}
+                    />
+                </HStack>
                 {projectData.map((el, i) => (
                     <VStack
                         key={el.gitLink}
@@ -35,7 +48,7 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
                             (
                                 <VStack>
                                     <ProjectCard
-                                        className={cls.ProjectsBlocka}
+                                        className={cls.ProjectsBlock}
                                         card={el}
                                     />
                                 </VStack>

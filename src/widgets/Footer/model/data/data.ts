@@ -6,12 +6,12 @@ export const footerData: PreviewType[] = [
         href: 'https://t.me/Ifedotov',
     },
     {
-        text: 'Telegram',
-        href: 'https://t.me/Ifedotov',
+        text: 'Vkontakte',
+        href: 'https://vk.com/1fedotov',
     },
     {
-        text: 'Telegram',
-        href: 'https://t.me/Ifedotov',
+        text: 'Codewars',
+        href: 'https://www.codewars.com/users/Matvey991',
     },
     {
         text: 'GitHub',

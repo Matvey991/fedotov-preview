@@ -7,7 +7,19 @@
     background: none;
     outline: none;
     border: none;
-    transition: ease 0.2s;
+    transition: all 0.2s;
+    
+    &:hover {
+        color: #7545C3;
+    }
+}
+
+.outline {
+    color: var(--primary-color);
+    background: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s;
     
     &:hover {
         color: #7545C3;

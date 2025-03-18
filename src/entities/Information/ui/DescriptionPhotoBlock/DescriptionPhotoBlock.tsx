@@ -59,7 +59,14 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
                     align='start'
                     className={cls.description}
                 >
-                    {func()}
+                    {func().map((el, i) => (
+                        <HStack
+                            max
+                            key={i}
+                        >
+                            {el}
+                        </HStack>
+                    ))}
                 </VStack>
             </VStack>
         </div>

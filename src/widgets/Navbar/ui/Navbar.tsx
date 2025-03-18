@@ -9,7 +9,6 @@ import { ThemeSwitcher } from '@/features/themeSwitcher';
 import { Icon } from '@/shared/ui/Icon';
 import { useTranslation } from 'react-i18next';
 import { LangSwitcher } from '@/features/langSwitcher';
-import { IconSize } from '@/shared/ui/Icon/Icon';
 import { navbarData } from '../model/data/navbarData';
 
 interface NavbarProps {
@@ -28,7 +27,7 @@ export const Navbar = memo((props: NavbarProps) => {
                     gap='4'
                     className={cls.logo}
                 >
-                    <Icon size={IconSize.M} Svg={<FedotovLogo />} />
+                    <Icon size='size_m' Svg={<FedotovLogo />} />
                     <Text
                         theme='white'
                         size='size_xl'

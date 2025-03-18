@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { CSSProperties, ImgHTMLAttributes, memo } from 'react';
 import cls from './AppImage.module.scss'
 
-type AppImageOpaticy = 'opaticy0_7' | 'opaticy0_6' | 'opaticy0_5' | 'none'
+type AppImageOpaticy = 'opaticy0_7' | 'opaticy0_5' | 'opaticy0_3' | 'none'
 
 interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     className?: string;

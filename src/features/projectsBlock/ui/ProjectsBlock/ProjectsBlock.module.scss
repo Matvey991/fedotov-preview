@@ -1,7 +1,16 @@
 .ProjectsBlock {
     padding: 50px;
+
+    &:hover {
+        .hashtag {
+            color: var(--hover-color);
+            user-select: none; 
+        }
+    }
 }
 
-.ProjectsBlocka {
-    padding: 50px;
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
 }

@@ -2,9 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss'
 
-export enum ButtonTheme {
-    OUTLINE_WHITE = 'outline_white',
-}
+type ButtonTheme = 'outline_white' | 'outline'
 
 export enum ButtonSize {
     S = 'size_s',
@@ -23,7 +21,7 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme = ButtonTheme.OUTLINE_WHITE,
+        theme = 'outline_white',
         size = ButtonSize.M,
         ...otherProps
     } = props

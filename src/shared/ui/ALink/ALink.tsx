@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo, ReactNode } from 'react';
 import cls from './ALink.module.scss'
 
-type AlinkTheme = 'outline' | 'clear'
+type AlinkTheme = 'outline' | 'clear' | 'clear_outline'
 
 interface ALinkProps {
     className?: string;
@@ -23,6 +23,7 @@ export const ALink = memo((props: ALinkProps) => {
 
     return (
         <a
+            draggable='false'
             target={target}
             href={href}
             className={classNames(cls.ALink, {}, additional)}

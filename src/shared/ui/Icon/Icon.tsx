@@ -1,26 +1,27 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
-import { memo, ReactNode, SVGProps } from 'react';
+import { memo, ReactNode } from 'react';
 
-export enum IconSize {
-    M = 'size_m'
-}
+type IconSize = 'size_s' | 'size_m'
+type IconTheme = 'white' | 'outline'
 
 interface IconProps {
     className?: string;
     Svg: ReactNode;
     inverted?: boolean;
     size?: IconSize;
+    theme?: IconTheme;
 }
 
 export const Icon = memo((props: IconProps) => {
     const {
-        className, Svg, inverted, size = IconSize.M, ...otherProps
+        className, Svg, theme = 'white', inverted, size = 'size_m', ...otherProps
     } = props;
 
     const additional = [
         className,
-        cls[size]
+        cls[size],
+        cls[theme],
     ]
 
     return (

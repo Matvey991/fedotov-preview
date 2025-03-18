@@ -17,42 +17,54 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
     const { className } = props
     const { t } = useTranslation()
     return (
-        <div className={classNames(cls.EducationBlock, {}, [className])}>
-            <VStack
+        <VStack
+            className={classNames(cls.EducationBlock, {}, [className])}
+            align='center'
+            justify='center'
+            gap='64'
+            max
+        >
+            <HStack
                 align='center'
                 justify='center'
-                gap='64'
+                gap='16'
+                max
             >
                 <Text
                     size='size_xl'
                     fontWeight='weight_500'
                     title={t('Обучение')}
                 />
-                <HStack
-                    align='center'
-                    justify='center'
-                    className={cls.education}
-                >
-                    {educationData.map((el) => (
-                        <HStack
-                            key={el.img}
-                            justify='center'
-                            align='center'
+                <Text
+                    size='size_xl'
+                    fontWeight='weight_500'
+                    title='#'
+                    className={cls.hashtag}
+                />
+            </HStack>
+            <HStack
+                align='center'
+                justify='center'
+            >
+                {educationData.map((el) => (
+                    <HStack
+                        key={el.img}
+                        justify='center'
+                        align='center'
+                    >
+                        <ALink
+                            theme='clear_outline'
+                            href={el.link}
+                            target='_blank'
                         >
-                            <ALink
-                                theme='clear'
-                                href={el.link}
-                                target='_blank'
-                            >
-                                <AppImage
-                                    height={265}
-                                    src={el.img}
-                                />
-                            </ALink>
-                        </HStack>
-                    ))}
-                </HStack>
-            </VStack>
-        </div>
+                            <AppImage
+                                height={265}
+                                src={el.img}
+                            />
+                        </ALink>
+                    </HStack>
+                ))}
+            </HStack>
+        </VStack>
     );
 });

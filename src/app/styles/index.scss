@@ -6,6 +6,7 @@
 .app {
     font: var(--font-m);
     min-height: 100vh;
+    overflow-x: hidden;
 
     background: var(--bg-color);
     color: var(--primary-color);

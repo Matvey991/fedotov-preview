@@ -7,6 +7,7 @@ import {
 import { VStack } from '@/shared/ui/Stack';
 import { ProjectsBlock } from '@/features/projectsBlock';
 import { EducationBlock } from '@/features/educationBlock';
+import { ParticlesBg } from '@/entities/Particles';
 
 export const MainPage = memo(() => {
 
@@ -19,6 +20,7 @@ export const MainPage = memo(() => {
             <ProjectsBlock />
             <SkillsBlock />
             <EducationBlock />
+            <ParticlesBg />
         </VStack>
     );
 });

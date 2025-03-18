@@ -11,13 +11,25 @@
 }
 
 .clear {
-    background-color: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.2s;
+
+    &:hover {
+        color: #7545C3;
+    }
+}
+
+.clear_outline {
+    background: none;
     outline: none;
     cursor: pointer;
     color: var(--text-color-white);
     transition: all 0.2s;
 
     &:hover {
-        color: var(--hover-color);
+        opacity: 0.5;
     }
 }

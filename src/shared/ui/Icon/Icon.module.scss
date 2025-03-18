@@ -1,13 +1,28 @@
-.Icon {
+.white {
     stroke: white;
     fill: white;
-    cursor: pointer;
+    transition: all 0.2s;
+    
+    &:hover {
+        color: #7545C3;
+        fill: #7545C3;
+    }
+}
+
+.outline {
+    stroke: white;
+    fill: white;
     transition: all 0.2s;
     
     &:hover {
         stroke: #7545C3;
-        fill: #7545C3;
+        color: #7545C3;
     }
+}
+
+.size_s {
+    width: 25px;
+    height: 25px;
 }
 
 .size_m {

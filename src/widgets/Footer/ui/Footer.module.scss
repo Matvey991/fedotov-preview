@@ -1,3 +1,20 @@
 .Footer {
-    padding: 48px 0; 
+    position: relative;
+    z-index: 9;
+    padding-top: 20px;
+    padding-bottom: 48px;
+    background-color: var(--skills-bg-color);
+
+    &:hover {
+        .hashtag {
+            color: var(--hover-color);
+            user-select: none; 
+        }
+    }
+}
+
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
 }

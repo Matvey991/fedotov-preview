@@ -1,14 +1,24 @@
 import { memo } from 'react';
 import cls from './MainPage.module.scss'
-import { DescriptionPhotoBlock, ProjectsBlock } from '@/entities/Information';
+import {
+    DescriptionPhotoBlock,
+    SkillsBlock,
+} from '@/entities/Information';
 import { VStack } from '@/shared/ui/Stack';
+import { ProjectsBlock } from '@/features/projectsBlock';
+import { EducationBlock } from '@/features/educationBlock';
 
 export const MainPage = memo(() => {
 
     return (
-        <VStack gap='32' className={cls.MainPage}>
+        <VStack
+            gap='64'
+            className={cls.MainPage}
+        >
             <DescriptionPhotoBlock />
             <ProjectsBlock />
+            <SkillsBlock />
+            <EducationBlock />
         </VStack>
     );
 });

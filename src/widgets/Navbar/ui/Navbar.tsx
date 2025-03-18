@@ -3,13 +3,14 @@ import { memo } from 'react';
 import cls from './Navbar.module.scss'
 import FedotovLogo from '../../../shared/assets/icons/FedotovIcon.svg';
 import { Text } from '@/shared/ui/Text';
-import { TextSize } from '@/shared/ui/Text/Text';
 import { HStack } from '@/shared/ui/Stack';
 import { Button } from '@/shared/ui/Button';
-import { ThemeSwitcher } from '@/features/ThemeSwitcher';
+import { ThemeSwitcher } from '@/features/themeSwitcher';
 import { Icon } from '@/shared/ui/Icon';
 import { useTranslation } from 'react-i18next';
-// import { IconSize } from '@/shared/ui/Icon/Icon';
+import { LangSwitcher } from '@/features/langSwitcher';
+import { IconSize } from '@/shared/ui/Icon/Icon';
+import { navbarData } from '../model/data/navbarData';
 
 interface NavbarProps {
     className?: string;
@@ -21,34 +22,42 @@ export const Navbar = memo((props: NavbarProps) => {
     const { className } = props
 
     return (
-        <HStack
-            align='center'
-            justify='between'
-            className={classNames(cls.Navbar, {}, [className])}
-        >
-            <HStack className={cls.logo}>
-                {/* <Icon size={IconSize.M} Svg={FedotovLogo} /> */}
-                {/* <Icon Svg={FedotovLogo} /> */}
-                <Text size={TextSize.M} text='EDOTOV' noneTheme />
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <HStack>
+                <HStack
+                    gap='4'
+                    className={cls.logo}
+                >
+                    <Icon size={IconSize.M} Svg={<FedotovLogo />} />
+                    <Text
+                        theme='white'
+                        size='size_xl'
+                        fontWeight='weight_300'
+                        text='EDOTOV'
+                    />
+                </HStack>
+                {navbarData.map((el) => (
+                    <HStack
+                        key={el.title}
+                        justify='end'
+                    >
+                        <Button>
+                            <Text
+                                size='size_m'
+                                title={t(el.title)}
+                                fontWeight='weight_300'
+                            />
+                        </Button>
+                    </HStack>
+                ))}
+                <HStack
+                    justify='center'
+                    align='center'
+                >
+                    <LangSwitcher />
+                    <ThemeSwitcher />
+                </HStack>
             </HStack>
-            <HStack align='center'>
-                <Button>
-                    {t('ОБО МНЕ')}
-                </Button>
-                <Button>
-                    {t('ПРОЕКТЫ')}
-                </Button>
-                <Button>
-                    {t('НАВЫКИ')}
-                </Button>
-                <Button>
-                    {t('ОБУЧЕНИЕ')}
-                </Button>
-                <Button>
-                    {t('КОНТАКТЫ')}
-                </Button>
-            </HStack>
-            <ThemeSwitcher />
-        </HStack>
+        </div>
     );
 });

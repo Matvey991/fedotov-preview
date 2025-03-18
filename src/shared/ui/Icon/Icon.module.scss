@@ -1,13 +1,13 @@
 .Icon {
-    color: #ffffff;
-    fill: #ffffff;
+    stroke: white;
+    fill: white;
     cursor: pointer;
-    transition: ease 0.2s;
-}
-
-.Icon:hover {
-    color: #7545C3;
-    fill: #7545C3;
+    transition: all 0.2s;
+    
+    &:hover {
+        stroke: #7545C3;
+        fill: #7545C3;
+    }
 }
 
 .size_m {

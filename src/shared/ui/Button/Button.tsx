@@ -1,10 +1,9 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss'
 
 export enum ButtonTheme {
     OUTLINE_WHITE = 'outline_white',
-    PURPLE = 'purple',
 }
 
 export enum ButtonSize {

@@ -1,8 +1,14 @@
 .app_dark_theme {
     --bg-color: #000000;
+    --inverted-bg-color: #ffffff;
 
     --primary-color: #ffffff; 
-    --secondary-color: #d0caca;
+    --text-color-white: #ffffff;
 
-    --shadow-projectCard-color: rgb(66 0 171 / 83%);
+    --hover-color: rgb(112, 22, 255);
+
+    --shadow-projectCard-color: rgba(93, 2, 239, 0.83);
+
+    --skills-bg-color: #00011B;
+    --skills-active-bg-color: #0066FF33;
 }

@@ -2,22 +2,11 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
-export enum TextTheme {
-    PRIMARY = 'primary',
-}
+type TextTheme = 'white' | 'outline'
+type TextAlign = 'left' | 'center' | 'right'
+type TextSize = 'size_s' | 'size_m' | 'size_l' | 'size_xl'
 
-export enum TextAlign {
-    RIGHT = 'right',
-    LEFT = 'left',
-    CENTER = 'center',
-}
-
-export enum TextSize {
-    S = 'size_s',
-    M = 'size_m',
-    L = 'size_l',
-    XL = 'size_xl'
-}
+type TextFontWeight = 'weight_700' | 'weight_500' | 'weight_300'
 
 interface TextProps {
     className?: string;
@@ -26,16 +15,16 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
-    noneTheme?: boolean;
+    fontWeight?: TextFontWeight;
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-    [TextSize.S]: 'h3',
-    [TextSize.M]: 'h2',
-    [TextSize.L]: 'h1',
-    [TextSize.XL]: 'h1',
+    'size_s': 'h3',
+    'size_m': 'h2',
+    'size_l': 'h1',
+    'size_xl': 'h1',
 };
 
 export const Text = memo((props: TextProps) => {
@@ -43,10 +32,10 @@ export const Text = memo((props: TextProps) => {
         className,
         text,
         title,
-        theme = TextTheme.PRIMARY,
-        align = TextAlign.LEFT,
-        size = TextSize.M,
-        noneTheme,
+        theme = '',
+        align = 'left',
+        size = 'size_m',
+        fontWeight = '500',
     } = props;
 
     const HeaderTag = mapSizeToHeaderTag[size];
@@ -55,21 +44,20 @@ export const Text = memo((props: TextProps) => {
         className,
         cls[align],
         cls[size],
-        noneTheme ? cls['no-theme'] : cls[theme],
+        cls[theme],
     ];
 
     return (
         <div className={classNames(cls.Text, {}, additional)}>
             {title && (
                 <HeaderTag
-                    className={cls.title}
+                    className={classNames(cls.title, {}, [className, cls[fontWeight]])}
                 >
                     {title}
                 </HeaderTag>
             )}
             {text && (
                 <p
-                    className={cls.text}
                 >
                     {text}
                 </p>

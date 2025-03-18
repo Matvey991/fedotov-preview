@@ -4,14 +4,14 @@
 
 .photo {
     width: 100vw;
-    // height: 864px;
+    height: 100vh;
+    object-fit: cover;
     user-select: none;
     filter: brightness(0.5);
 }
 
-.text {
+.description {
     position: absolute;
-    left: 100px;
-    top: 290px;
-    white-space: pre-line
+    z-index: 100;
+    padding: 100px;
 }

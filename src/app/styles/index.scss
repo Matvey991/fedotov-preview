@@ -1,7 +1,7 @@
-@import './reset';
-@import './variables/global';
-@import './themes/light';
-@import './themes/dark';
+@import url('./reset.scss');
+@import url('./variables/global.scss');
+@import url('./themes/light.scss');
+@import url('./themes/dark.scss');
 
 .app {
     font: var(--font-m);
@@ -9,5 +9,4 @@
 
     background: var(--bg-color);
     color: var(--primary-color);
-    text-align: center;
 }

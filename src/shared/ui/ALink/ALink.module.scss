@@ -1,0 +1,22 @@
+.outline {
+    background-color: #7545C3;
+    color: white;
+    font-weight: 300;
+    padding: 10px 50px;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+.clear {
+    background-color: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.clear_outline {
+
+}

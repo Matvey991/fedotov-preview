@@ -1,0 +1,15 @@
+.swiper {
+    height: 300px;
+    @media (max-width: 1440px) {
+        height: 300px;
+        width: 100%;
+    }
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+ 

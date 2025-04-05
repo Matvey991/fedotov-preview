@@ -21,73 +21,61 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
     if (end) {
         return (
-            <div className={classNames(cls.ProjectCard, {}, [className])}>
-                <VStack
-                    gap="64"
-                    className={cls.contentCard}
-                >
-                    <HStack>
+            <HStack
+                justify="end"
+                max
+                className={classNames(cls.ProjectCard, {}, [className])}
+            >
+                <div className={cls.containerImg}>
+                    <AppImage src={img} className={cls.img} />
+                    <VStack className={cls.titleWrapper} gap="32">
                         <Text
                             title={t(name)}
-                            theme='white'
-                            fontWeight='weight_500'
-                            size='size_l'
-                            className={cls.titleProject}
+                            tag="h3"
+                            theme="white"
                         />
-                    </HStack>
-                    <ALink
-                        href={gitLink}
-                        target="_blank">
-                        <Text
-                            title={t(t('Подробнее'))}
-                            fontWeight='weight_300'
-                            size='size_s'
-                        />
-                    </ALink>
-                </VStack>
-                <VStack className={cls.containerImg}>
-                    <AppImage
-                        src={img}
-                        width={700}
-                        height={370}
-                        opaticy='opaticy0_3'
-                    />
-                </VStack>
-            </div>
+                        <ALink
+                            theme="outline"
+                            href={gitLink}
+                            target="_blank"
+                        >
+                            <Text
+                                text={t('Подробнее')}
+                                theme="white"
+                            />
+                        </ALink>
+                    </VStack>
+                </div>
+            </HStack>
         )
     }
 
     return (
-        <div className={classNames(cls.ProjectCard, {}, [className])}>
-            <VStack
-                gap="64"
-                className={cls.contentCard}
-            >
-                <Text
-                    title={t(name)}
-                    fontWeight='weight_500'
-                    size='size_l'
-                    className={cls.titleProject}
-                    theme='white'
-                />
-                <ALink
-                    href={gitLink}
-                    target="_blank">
+        <HStack
+            justify="start"
+            max
+            className={classNames(cls.ProjectCard, {}, [className])}
+        >
+            <div className={cls.containerImg}>
+                <AppImage src={img} className={cls.img} />
+                <VStack className={cls.titleWrapper} gap="32">
                     <Text
-                        title={t(t('Подробнее'))}
-                        fontWeight='weight_300'
-                        size='size_s'
+                        title={t(name)}
+                        tag="h3"
+                        theme="white"
                     />
-                </ALink>
-            </VStack>
-            <VStack className={cls.containerImg}>
-                <AppImage
-                    src={img}
-                    width={700}
-                    height={370}
-                    opaticy='opaticy0_3'
-                />
-            </VStack>
-        </div>
+                    <ALink
+                        theme="outline"
+                        href={gitLink}
+                        target="_blank"
+                    >
+                        <Text
+                            text={t('Подробнее')}
+                            theme="white"
+                        />
+                    </ALink>
+                </VStack>
+            </div>
+        </HStack>
     )
 }

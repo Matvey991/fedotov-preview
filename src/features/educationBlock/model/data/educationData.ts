@@ -17,4 +17,8 @@ export const educationData: EducationType[] = [
         img: 'https://sun9-57.userapi.com/impg/iFgoaqA1sCNgH13_uuRTl3Rkrqcf_SuAQzRyZw/MCL6r7Em3tE.jpg?size=498x702&quality=95&sign=ea6e3bf064a759c6ff8c088b9a32d047&type=album',
         link: 'https://habr.com/ru/articles/664360/',
     },
+    {
+        img: 'https://sun9-7.userapi.com/impg/p6JGQaRbl8mKh6TaXUvzIc56DTqvG_LOaPM3Cw/u4iuHINBJxc.jpg?size=2560x1150&quality=95&sign=ed79f53289a4e92d54a395bb5906004b&type=album',
+        link: 'https://kobezzza.ru/',
+    },
 ]

@@ -4,7 +4,6 @@ import { Button } from '@/shared/ui/Button';
 import LightIcon from '../../../shared/assets/icons/light.svg'
 import DarkIcon from '../../../shared/assets/icons/dark.svg'
 import { Theme } from '@/shared/consts/theme';
-import { ButtonSize } from '@/shared/ui/Button/Button';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
 import { Icon } from '@/shared/ui/Icon';
 
@@ -17,7 +16,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
 
     return (
         <Button
-            size={ButtonSize.S}
+            size='size_s'
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >
@@ -25,13 +24,13 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                 theme === Theme.DARK
                     ?
                     <Icon
-                        theme='outline'
+                        theme='white'
                         size='size_s'
                         Svg={<DarkIcon />}
                     />
                     :
                     <Icon
-                        theme='outline'
+                        theme='white'
                         size='size_s'
                         Svg={<LightIcon />}
                     />

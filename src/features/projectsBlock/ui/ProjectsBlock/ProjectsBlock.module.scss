@@ -1,5 +1,6 @@
 .ProjectsBlock {
-    padding: 50px;
+    padding: 50px 75px;
+    width: 100%;
 
     &:hover {
         .hashtag {
@@ -7,6 +8,10 @@
             user-select: none; 
         }
     }
+
+    @media (max-width: 960px ) {
+        padding: 20px 30px;
+    }     
 }
 
 .hashtag {

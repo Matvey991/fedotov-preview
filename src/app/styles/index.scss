@@ -1,13 +1,18 @@
 @import url('./reset.scss');
-@import url('./variables/global.scss');
 @import url('./themes/light.scss');
 @import url('./themes/dark.scss');
 
 .app {
+    text-align: center;
     font: var(--font-m);
     min-height: 100vh;
     overflow-x: hidden;
 
     background: var(--bg-color);
     color: var(--primary-color);
+
+    --z-index-text: 999;
+    --z-index-navbar: 999;
+    --z-index-description: 998;
 }
+

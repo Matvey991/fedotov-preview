@@ -1,5 +1,4 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { CSSProperties, ImgHTMLAttributes, memo } from 'react';
 import cls from './AppImage.module.scss'
 
@@ -17,7 +16,6 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 export const AppImage = memo((props: AppImageProps) => {
 
     const { className, src, width, height, alt, opaticy = 'none' } = props
-    const { t } = useTranslation()
 
     const styles: CSSProperties = {
         width: width,

@@ -1,7 +1,8 @@
 .EducationBlock {
-    padding: 98px 0;
     position: relative;
     color: var(--primary-color);
+    z-index: var(--z-index-text);
+    padding: 0 150px;
 
     &:hover {
         .hashtag {
@@ -11,9 +12,20 @@
     }
 }
 
-
 .hashtag {
     transition: all 0.2s;
     color: transparent;
     user-select: none; 
+}
+
+.imgWrapper {
+    overflow-x: auto;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
 }

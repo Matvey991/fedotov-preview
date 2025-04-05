@@ -3,18 +3,18 @@ import { NavbarBtnType } from '@/entities/Information/ui/ProjectCard/model/types
 export const navbarData: NavbarBtnType[] = [
     {
         title: 'ПРОЕКТЫ',
-        href: '',
+        href: 'projects',
     },
     {
         title: 'НАВЫКИ',
-        href: '',
+        href: 'skills',
     },
     {
         title: 'ОБУЧЕНИЕ',
-        href: '',
+        href: 'education',
     },
     {
         title: 'КОНТАКТЫ',
-        href: '',
+        href: 'contacts',
     },
 ]

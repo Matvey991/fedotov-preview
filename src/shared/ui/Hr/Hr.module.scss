@@ -1,5 +1,9 @@
 .Hr {
     height: 1px;
-    background: black;
+    background: var(--primary-color);
     border: none;
+}
+
+.max {
+    width: 100%;
 }

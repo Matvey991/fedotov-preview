@@ -1,3 +1,7 @@
+.Text {
+    font: var(--font-l);
+}
+
 .center {
     text-align: center;
 }
@@ -11,92 +15,52 @@
 }
 
 
-.size_s {
-    .title {
-        font: var(--font-m);
-    }
-    .text {
-        font: var(--font-s);
-    }
-    .weight_700 {
-        font-weight: 700;
-    }
-    
-    .weight_500 {
-        font-weight: 500;
-    }
-    
-    .weight_300 {
-        font-weight: 300;
+h4 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 36px;
+
+    @media screen and (max-width: 1024px ) {
+        font-size: 18px;
     }
 }
 
-.size_m {
-    .title {
-        font: var(--font-l);
-    }
-    .text {
-        font: var(--font-m);
-    }
-    .weight_700 {
-        font-weight: 700;
-    }
+h2 {
+    font-size: 48px;
     
-    .weight_500 {
-        font-weight: 500;
-    }
-    
-    .weight_300 {
-        font-weight: 300;
+    @media screen and (max-width: 1024px ) {
+        font-size: 24px;
     }
 }
 
-.size_l {
-    .title {
-        font: var(--font-xl);
-        font-weight: 500;
-    }
-    .text {
-        font: var(--font-l);
-    }
-    .weight_700 {
-        font-weight: 700;
-    }
-    
-    .weight_500 {
-        font-weight: 500;
-    }
-    
-    .weight_300 {
-        font-weight: 300;
+h1 {
+    font-size: 72px;
+
+     @media screen and (max-width: 1024px ) {
+        font-size: 36px;
     }
 }
 
-.size_xl {
-    .title {
-        font: var(--font-xxl);
-    }
-    .text {
-        font: var(--font-xl);
-    }
-    .weight_700 {
-        font-weight: 700;
-    }
-    
-    .weight_500 {
-        font-weight: 500;
-    }
-    
-    .weight_300 {
-        font-weight: 300;
-    }
+
+.white {
+    color: var(--text-color-white);
 }
 
-    .white {
-            color: var(--text-color-white);
-    }
+.outline {
+    color: var(--primary-color);
+}
 
-    .outline {
-            color: var(--primary-color);
-    }
 
+.weight_700 {
+    font-weight: 700;
+}
+
+.weight_500 {
+    font-weight: 500;
+}
+
+.weight_300 {
+    font-weight: 300;
+}

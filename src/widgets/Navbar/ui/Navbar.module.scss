@@ -1,8 +1,11 @@
 .Navbar {
-    width: 100vw;
-    height: 150px;
     background: none;
-    padding: 50px 50px;
     position: absolute;
-    z-index: 20;
+    padding: 50px;
+    z-index: var(--z-index-navbar);
+
+    @media (max-width: 440px) {
+        top: 0;
+        padding: 5% 5%;
+    }
 }

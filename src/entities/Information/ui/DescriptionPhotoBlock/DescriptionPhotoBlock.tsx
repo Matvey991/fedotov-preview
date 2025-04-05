@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
 import cls from './DescriptionPhotoBlock.module.scss'
-import FedotovPhoto from '../../../../shared/assets/2025-03-12 19.05.22.jpg'
+import FedotovPhoto from '../../../../shared/assets/2025-04-06 01.56.12.jpg'
 import { Text } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
 import { HStack, VStack } from '@/shared/ui/Stack';
@@ -17,7 +17,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
     const func = useCallback(() => {
         const arr1 = (
             <Text
-                size='size_xl'
+                tag='h1'
                 theme='white'
                 title={t('Привет, я Матвей!')}
                 fontWeight='weight_700'
@@ -25,7 +25,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
         )
         const arr2 = (
             <Text
-                size='size_l'
+                tag='h2'
                 theme='white'
                 title={t('Фронтенд разработчик')}
                 fontWeight='weight_300'
@@ -33,7 +33,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
         )
         const arr3 = (
             <Text
-                size='size_l'
+                tag='h2'
                 theme='white'
                 title={t('с 2-х летнем опытом.')}
                 fontWeight='weight_300'
@@ -47,7 +47,6 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
             className={classNames(cls.DescriptionPhotoBlock, {}, [className])}
         >
             <VStack
-                align='center'
                 justify='center'
             >
                 <img
@@ -56,11 +55,13 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
                     draggable="false"
                 />
                 <VStack
-                    align='start'
+                    justify='center'
                     className={cls.description}
                 >
                     {func().map((el, i) => (
                         <HStack
+                            align='center'
+                            justify='start'
                             max
                             key={i}
                         >

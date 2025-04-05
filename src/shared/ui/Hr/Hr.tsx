@@ -6,11 +6,12 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 interface HrProps {
     className?: string;
     width?: string | number;
+    max?: boolean;
 }
 
 export const Hr = memo((props: HrProps) => {
 
-    const { className, width } = props
+    const { className, width, max } = props
     const { t } = useTranslation()
 
     const styles: CSSProperties = {
@@ -20,7 +21,7 @@ export const Hr = memo((props: HrProps) => {
     return (
         <hr
             style={styles}
-            className={classNames(cls.Hr, {}, [className])}
+            className={classNames(cls.Hr, { [cls.max]: max }, [className])}
         />
     );
 });

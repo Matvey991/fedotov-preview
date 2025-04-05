@@ -4,7 +4,7 @@ import cls from './Text.module.scss';
 
 type TextTheme = 'white' | 'outline'
 type TextAlign = 'left' | 'center' | 'right'
-type TextSize = 'size_s' | 'size_m' | 'size_l' | 'size_xl'
+type TextTag = 'h4' | 'h3' | 'h2' | 'h1'
 
 type TextFontWeight = 'weight_700' | 'weight_500' | 'weight_300'
 
@@ -14,17 +14,17 @@ interface TextProps {
     text?: string;
     theme?: TextTheme;
     align?: TextAlign;
-    size?: TextSize;
+    tag?: TextTag;
     fontWeight?: TextFontWeight;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
 
-const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-    'size_s': 'h3',
-    'size_m': 'h2',
-    'size_l': 'h1',
-    'size_xl': 'h1',
+const mapSizeToHeaderTag: Record<TextTag, HeaderTagType> = {
+    h4: 'h4',
+    h3: 'h3',
+    h2: 'h2',
+    h1: 'h1',
 };
 
 export const Text = memo((props: TextProps) => {
@@ -34,16 +34,16 @@ export const Text = memo((props: TextProps) => {
         title,
         theme = '',
         align = 'left',
-        size = 'size_m',
+        tag = 'h2',
         fontWeight = '500',
     } = props;
 
-    const HeaderTag = mapSizeToHeaderTag[size];
+    const HeaderTag = mapSizeToHeaderTag[tag];
 
     const additional = [
         className,
         cls[align],
-        cls[size],
+        cls[tag],
         cls[theme],
     ];
 
@@ -58,6 +58,7 @@ export const Text = memo((props: TextProps) => {
             )}
             {text && (
                 <p
+                    className={classNames('', {}, [cls[tag]])}
                 >
                     {text}
                 </p>

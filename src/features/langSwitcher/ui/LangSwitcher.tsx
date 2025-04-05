@@ -2,7 +2,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Button } from '@/shared/ui/Button';
-import { ButtonSize } from '@/shared/ui/Button/Button';
 import { Text } from '@/shared/ui/Text';
 
 interface LangSwitcherProps {
@@ -21,10 +20,10 @@ export const LangSwitcher = memo((props: LangSwitcherProps) => {
     return (
         <Button
             className={classNames('', {}, [className])}
-            size={ButtonSize.S}
+            size='size_s'
             onClick={toggle}>
             <Text
-                size='size_l'
+                tag='h2'
                 fontWeight='weight_300'
                 text={t('Короткий язык')}
             />

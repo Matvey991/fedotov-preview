@@ -1,17 +1,37 @@
 .ProjectCard {
     position: relative;
-    z-index: 9;
+    z-index: 50;
+    padding: 50px;
+    object-fit: cover;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.2);
+    display: flex;
 }
 
 .containerImg {
-    box-shadow: var(--shadow-projectCard-color) 0 0 350px 20px;
-    max-height: 90%;
+    width: 770px;
+    height: 370px;
+    background-color: black;
+    box-shadow: var(--shadow-projectCard-color) 5px 0 350px 10px;
+    position: relative;
+    object-fit: cover;
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.contentCard {
+.titleWrapper {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 10%;
-    z-index: 500;
-    max-width: 600px;
+
+    @media screen and (max-width: 520px) {
+        font-size: 16px;
+    }
 }

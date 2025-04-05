@@ -3,12 +3,7 @@ import { ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss'
 
 type ButtonTheme = 'outline_white' | 'outline'
-
-export enum ButtonSize {
-    S = 'size_s',
-    M = 'size_m',
-    L = 'size_l'
-}
+type ButtonSize = 'size_s' | 'size_m' | 'size_l' | 'size_xl'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
@@ -22,7 +17,7 @@ export const Button = memo((props: ButtonProps) => {
         className,
         children,
         theme = 'outline_white',
-        size = ButtonSize.M,
+        size = 'size_m',
         ...otherProps
     } = props
 

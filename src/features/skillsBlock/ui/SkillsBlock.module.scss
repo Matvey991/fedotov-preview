@@ -1,0 +1,20 @@
+.SkillsBlock {
+    position: relative;
+    z-index: var(--z-index-text);
+    padding: 50px 150px;
+    background-color: var(--skills-bg-color);
+    width: 100%;
+
+    &:hover {
+        .hashtag {
+            color: var(--hover-color);
+            user-select: none; 
+        }
+    }
+}
+
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
+}

@@ -1,8 +1,7 @@
 .Footer {
     position: relative;
-    z-index: 9;
-    padding-top: 20px;
-    padding-bottom: 48px;
+    z-index: var(--z-index-text);
+    padding: 50px 0;
     background-color: var(--skills-bg-color);
 
     &:hover {

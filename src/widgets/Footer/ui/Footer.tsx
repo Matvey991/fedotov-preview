@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { footerData } from '../model/data/data';
 import { Text } from '@/shared/ui/Text';
 import { ALink } from '@/shared/ui/ALink';
+import { Element } from 'react-scroll';
 
 interface FooterProps {
     className?: string;
@@ -16,7 +17,10 @@ export const Footer = memo((props: FooterProps) => {
     const { className } = props
 
     return (
-        <div className={classNames(cls.Footer, {}, [className])}>
+        <Element
+            name='contacts'
+            className={classNames(cls.Footer, {}, [className])}
+        >
             <VStack
                 gap='64'
                 justify='center'
@@ -29,12 +33,12 @@ export const Footer = memo((props: FooterProps) => {
                     gap='16'
                 >
                     <Text
-                        size='size_xl'
+                        tag='h2'
                         fontWeight='weight_500'
                         title={t('Контакты')}
                     />
                     <Text
-                        size='size_xl'
+                        tag='h2'
                         fontWeight='weight_500'
                         title='#'
                         className={cls.hashtag}
@@ -57,13 +61,13 @@ export const Footer = memo((props: FooterProps) => {
                                 <Text
                                     title={el.text}
                                     fontWeight='weight_300'
-                                    size='size_l'
+                                    tag='h3'
                                 />
                             </ALink>
                         </HStack>
                     ))}
                 </HStack>
             </VStack>
-        </div>
+        </Element>
     );
 });

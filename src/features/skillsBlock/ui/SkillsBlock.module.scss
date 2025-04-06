@@ -11,6 +11,11 @@
             user-select: none; 
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 50px;
+    }
 }
 
 .hashtag {

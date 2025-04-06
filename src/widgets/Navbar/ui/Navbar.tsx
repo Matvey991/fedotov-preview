@@ -30,6 +30,7 @@ export const Navbar = memo((props: NavbarProps) => {
                     tag='h4'
                     fontWeight='weight_300'
                     title='EDOTOV'
+                    TextSizeType='textLittle'
                 />
             </HStack >
             {isMobile ?

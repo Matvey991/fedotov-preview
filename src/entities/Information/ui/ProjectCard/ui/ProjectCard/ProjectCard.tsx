@@ -33,6 +33,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                             title={t(name)}
                             tag="h3"
                             theme="white"
+                            TextSizeType='textMedium'
                         />
                         <ALink
                             theme="outline"
@@ -63,6 +64,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         title={t(name)}
                         tag="h3"
                         theme="white"
+                        fontWeight='weight_500'
+                        TextSizeType='textMedium'
                     />
                     <ALink
                         theme="outline"

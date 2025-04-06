@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 import './SwiperCard.scss'
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { HStack } from '@/shared/ui/Stack';
 
 interface SwiperCardProps {
     className?: string;
@@ -23,18 +24,24 @@ export const SwiperCard = memo((props: SwiperCardProps) => {
         <Swiper
             spaceBetween={10}
             autoplay={{
-                delay: 1000,
+                delay: 100,
             }}
             slidesPerView={'auto'}
             modules={[Autoplay, Pagination]}
             className={classNames('', {}, [className])}
         >
             {card.map((el) => (
-                <SwiperSlide key={el.link}>
-                    <ALink href={el.link} theme='clear_outline' target='_blank'>
-                        <AppImage height={200} src={el.img} />
-                    </ALink>
-                </SwiperSlide>
+                <HStack
+                    max
+                    justify='center'
+                    align='center'
+                >
+                    <SwiperSlide key={el.link}>
+                        <ALink href={el.link} theme='clear_outline' target='_blank'>
+                            <AppImage height={200} src={el.img} />
+                        </ALink>
+                    </SwiperSlide>
+                </HStack>
             ))}
         </Swiper >
     );

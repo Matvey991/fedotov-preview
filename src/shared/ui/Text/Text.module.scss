@@ -52,7 +52,6 @@ h1 {
     color: var(--primary-color);
 }
 
-
 .weight_700 {
     font-weight: 700;
 }
@@ -63,4 +62,19 @@ h1 {
 
 .weight_300 {
     font-weight: 300;
+}
+
+.textLittle {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+.textMedium {
+    font-size: 36px;
+}
+
+.textBig {
+    font-size: 48px;
+    font-weight: 500;
 }

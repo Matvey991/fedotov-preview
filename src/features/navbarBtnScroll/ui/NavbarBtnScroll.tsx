@@ -26,6 +26,7 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
             >
                 {navbarData.map((el) => (
                     <Link
+                        key={el.href}
                         activeClass="active"
                         to={el.href}
                         spy={true}
@@ -47,6 +48,7 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
                                 tag='h4'
                                 title={t(el.title)}
                                 fontWeight='weight_300'
+                                TextSizeType='textLittle'
                             />
                         </Button>
                     </Link>
@@ -55,6 +57,7 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
             <HStack
                 justify='center'
                 align='end'
+                gap='16'
             >
                 <LangSwitcher />
                 <ThemeSwitcher />

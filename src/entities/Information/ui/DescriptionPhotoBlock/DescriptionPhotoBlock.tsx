@@ -21,6 +21,7 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
                 theme='white'
                 title={t('Привет, я Матвей!')}
                 fontWeight='weight_700'
+                TextSizeType='textBig'
             />
         )
         const arr2 = (

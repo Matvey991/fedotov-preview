@@ -35,16 +35,17 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
                         tag='h2'
                         fontWeight='weight_500'
                         title={t('Обучение')}
+                        TextSizeType='textBig'
                     />
                     <Text
                         tag='h2'
                         fontWeight='weight_500'
                         title='#'
                         className={cls.hashtag}
+                        TextSizeType='textBig'
                     />
                 </HStack>
                 <VStack
-                    className='imgWrapper'
                     align='center'
                     justify='center'
                 >

@@ -36,12 +36,14 @@ export const Footer = memo((props: FooterProps) => {
                         tag='h2'
                         fontWeight='weight_500'
                         title={t('Контакты')}
+                        TextSizeType='textBig'
                     />
                     <Text
                         tag='h2'
                         fontWeight='weight_500'
                         title='#'
                         className={cls.hashtag}
+                        TextSizeType='textBig'
                     />
                 </HStack>
                 <HStack
@@ -62,6 +64,7 @@ export const Footer = memo((props: FooterProps) => {
                                     title={el.text}
                                     fontWeight='weight_300'
                                     tag='h3'
+                                    TextSizeType='textMedium'
                                 />
                             </ALink>
                         </HStack>

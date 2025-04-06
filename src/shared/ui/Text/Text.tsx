@@ -6,6 +6,7 @@ type TextTheme = 'white' | 'outline'
 type TextAlign = 'left' | 'center' | 'right'
 type TextTag = 'h4' | 'h3' | 'h2' | 'h1'
 
+type TextSize = 'textLittle' | 'textMedium' | 'textBig'
 type TextFontWeight = 'weight_700' | 'weight_500' | 'weight_300'
 
 interface TextProps {
@@ -16,6 +17,7 @@ interface TextProps {
     align?: TextAlign;
     tag?: TextTag;
     fontWeight?: TextFontWeight;
+    TextSizeType?: TextSize;
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
@@ -32,6 +34,7 @@ export const Text = memo((props: TextProps) => {
         className,
         text,
         title,
+        TextSizeType = 'textLittle',
         theme = '',
         align = 'left',
         tag = 'h2',
@@ -40,25 +43,27 @@ export const Text = memo((props: TextProps) => {
 
     const HeaderTag = mapSizeToHeaderTag[tag];
 
-    const additional = [
+    const additional: Array<string | undefined> = [
         className,
         cls[align],
         cls[tag],
         cls[theme],
-    ];
+        cls[TextSizeType],
+        cls[fontWeight],
+    ]
 
     return (
-        <div className={classNames(cls.Text, {}, additional)}>
+        <div className={classNames(cls.Text, {}, [className])}>
             {title && (
                 <HeaderTag
-                    className={classNames(cls.title, {}, [className, cls[fontWeight]])}
+                    className={classNames(cls.title, {}, additional)}
                 >
                     {title}
                 </HeaderTag>
             )}
             {text && (
                 <p
-                    className={classNames('', {}, [cls[tag]])}
+                    className={classNames('', {}, additional)}
                 >
                     {text}
                 </p>

@@ -33,11 +33,13 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
                         tag='h2'
                         fontWeight='weight_500'
                         title={t('Проекты')}
+                        TextSizeType='textBig'
                     />
                     <Text
                         tag='h2'
                         fontWeight='weight_500'
                         title='#'
+                        TextSizeType='textBig'
                         className={cls.hashtag}
                     />
                 </HStack>

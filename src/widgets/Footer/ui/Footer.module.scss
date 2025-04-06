@@ -17,3 +17,11 @@
     color: transparent;
     user-select: none; 
 }
+
+.btnWrapper {
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+    };
+}

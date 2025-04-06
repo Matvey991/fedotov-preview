@@ -23,13 +23,11 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
                 align='center'
                 justify='center'
                 gap='64'
-                max
             >
                 <HStack
                     align='center'
                     justify='center'
                     gap='16'
-                    max
                 >
                     <Text
                         tag='h2'
@@ -48,6 +46,7 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
                 <VStack
                     align='center'
                     justify='center'
+                    max
                 >
                     <SwiperCard
                         card={educationData}

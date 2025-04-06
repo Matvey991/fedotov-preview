@@ -24,7 +24,7 @@ export const SwiperCard = memo((props: SwiperCardProps) => {
         <Swiper
             spaceBetween={10}
             autoplay={{
-                delay: 100,
+                delay: 1500,
             }}
             slidesPerView={'auto'}
             modules={[Autoplay, Pagination]}
@@ -32,6 +32,7 @@ export const SwiperCard = memo((props: SwiperCardProps) => {
         >
             {card.map((el) => (
                 <HStack
+                    key={el.img}
                     max
                     justify='center'
                     align='center'

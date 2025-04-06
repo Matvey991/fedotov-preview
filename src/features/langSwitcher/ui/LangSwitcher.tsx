@@ -23,6 +23,7 @@ export const LangSwitcher = memo((props: LangSwitcherProps) => {
             size='size_s'
             onClick={toggle}>
             <Text
+                link
                 tag='h2'
                 fontWeight='weight_300'
                 text={t('Короткий язык')}

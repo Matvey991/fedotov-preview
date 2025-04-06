@@ -35,6 +35,7 @@ export const SkillsBlock = memo((props: SkillsBlockProps) => {
                     align='center'
                     justify='center'
                     gap='16'
+                    max
                 >
                     <Text
                         tag='h2'
@@ -51,14 +52,15 @@ export const SkillsBlock = memo((props: SkillsBlockProps) => {
                     />
                 </HStack>
                 <VStack
-                    max
                     gap='none'
-                    align='center'
+                    align='start'
+                    max
                 >
                     <Hr max />
                     {skillsData.map((el, i) => (
                         <VStack
                             key={el.name}
+                            max
                         >
                             <SkillsCard
                                 collapsed={collapsed === i}

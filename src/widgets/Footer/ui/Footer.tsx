@@ -29,7 +29,6 @@ export const Footer = memo((props: FooterProps) => {
                 <HStack
                     align='center'
                     justify='center'
-                    max
                     gap='16'
                 >
                     <Text
@@ -47,10 +46,13 @@ export const Footer = memo((props: FooterProps) => {
                     />
                 </HStack>
                 <HStack
+                    max
                     align='center'
+                    className={cls.btnWrapper}
                 >
                     {footerData.map((el) => (
                         <HStack
+                            max
                             justify='center'
                             align='center'
                             key={el.href}
@@ -61,6 +63,7 @@ export const Footer = memo((props: FooterProps) => {
                                 target='_blank'
                             >
                                 <Text
+                                    link
                                     title={el.text}
                                     fontWeight='weight_300'
                                     tag='h3'

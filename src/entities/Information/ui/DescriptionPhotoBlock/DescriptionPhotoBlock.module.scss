@@ -13,10 +13,15 @@
 
 .description {
     position: absolute;
-    z-index: 50;
+    z-index: var(--z-index-description);
     padding: 30px 70px;
 
-    @media screen and (max-width: 700px ) {
-        padding-left: 10px;
+    @media screen and (max-width: 1300px) {
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    @media screen and (max-width: 650px) {
+        top: 27%;
     }
 }

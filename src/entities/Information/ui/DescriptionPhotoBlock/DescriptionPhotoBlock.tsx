@@ -21,23 +21,23 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
                 theme='white'
                 title={t('Привет, я Матвей!')}
                 fontWeight='weight_700'
-                TextSizeType='textBig'
+                TextSizeType='textVeryBig'
             />
         )
         const arr2 = (
             <Text
                 tag='h2'
                 theme='white'
-                title={t('Фронтенд разработчик')}
                 fontWeight='weight_300'
+                title={t('Фронтенд разработчик')}
             />
         )
         const arr3 = (
             <Text
                 tag='h2'
                 theme='white'
-                title={t('с 2-х летнем опытом.')}
                 fontWeight='weight_300'
+                title={t('с 2-х летнем опытом.')}
             />
         )
         return [arr1, arr2, arr3]

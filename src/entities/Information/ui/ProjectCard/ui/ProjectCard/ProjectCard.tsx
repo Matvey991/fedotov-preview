@@ -22,8 +22,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
     if (end) {
         return (
             <HStack
-                justify="end"
                 max
+                justify="end"
                 className={classNames(cls.ProjectCard, {}, [className])}
             >
                 <div className={cls.containerImg}>
@@ -34,6 +34,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                             tag="h3"
                             theme="white"
                             TextSizeType='textMedium'
+                            className={cls.title}
                         />
                         <ALink
                             theme="outline"
@@ -54,7 +55,6 @@ export const ProjectCard = (props: ProjectCardProps) => {
     return (
         <HStack
             justify="start"
-            max
             className={classNames(cls.ProjectCard, {}, [className])}
         >
             <div className={cls.containerImg}>
@@ -66,6 +66,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         theme="white"
                         fontWeight='weight_500'
                         TextSizeType='textMedium'
+                        className={cls.title}
                     />
                     <ALink
                         theme="outline"

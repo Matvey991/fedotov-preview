@@ -1,6 +1,7 @@
 .Text {
-    font: var(--font-l);
+ font: var(--font-l);
 }
+
 
 .center {
     text-align: center;
@@ -14,35 +15,29 @@
     text-align: right;
 }
 
+h1 {
+    font-size: 72px;
 
-h4 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 36px;
-
-    @media screen and (max-width: 1024px ) {
-        font-size: 18px;
+     @media screen and (max-width: 1224px ) {
+        font-size: 32px;
     }
 }
 
 h2 {
     font-size: 48px;
     
-    @media screen and (max-width: 1024px ) {
-        font-size: 24px;
+    @media screen and (max-width: 1224px ) {
+        font-size: 22px;
     }
 }
 
-h1 {
-    font-size: 72px;
+h4 {
+    font-size: 24px;
 
-     @media screen and (max-width: 1024px ) {
-        font-size: 36px;
+    @media screen and (max-width: 1224px) {
+        font-size: 16px;
     }
 }
-
 
 .white {
     color: var(--text-color-white);
@@ -69,12 +64,22 @@ h1 {
     font-weight: 300;
 }
 
-
 .textMedium {
     font-size: 36px;
 }
 
 .textBig {
     font-size: 48px;
-    font-weight: 500;
+}
+
+.textVeryBig {
+    width: 680px;
+}
+
+.link {
+    transition: 0.2s all;
+    
+    &:hover {
+        color: var(--hover-color);
+    }
 }

@@ -40,6 +40,7 @@ export const SkillsCard = memo((props: SkillsCardProps) => {
                     onClick={() => onCollapsedHandler(id)}
                 >
                     <Text
+                        link
                         className={cls.title}
                         tag='h2'
                         fontWeight='weight_300'

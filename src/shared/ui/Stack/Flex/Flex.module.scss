@@ -57,6 +57,10 @@
 
 .gap32 {
     gap: 32px;
+
+    @media screen and (max-width: 440px) {
+        gap: 20px;
+    }
 }
 
 .gap64 {

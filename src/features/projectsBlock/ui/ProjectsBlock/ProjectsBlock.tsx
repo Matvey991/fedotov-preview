@@ -28,6 +28,7 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
                     align='center'
                     justify='center'
                     gap='16'
+                    max
                 >
                     <Text
                         tag='h2'
@@ -45,20 +46,19 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
                 </HStack>
                 {projectData.map((el, i) => (
                     <VStack
+                        max
                         key={el.gitLink}
                     >
                         {i % 2 === 0
                             ?
                             (
                                 <ProjectCard
-                                    // className={cls.ProjectsBlock}
                                     card={el}
                                 />
                             )
                             :
                             (
                                 <ProjectCard
-                                    // className={cls.ProjectsBlock}
                                     card={el}
                                     end
                                 />

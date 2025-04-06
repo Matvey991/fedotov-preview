@@ -20,9 +20,10 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
     const { t } = useTranslation()
 
     return (
-        <HStack className={classNames(cls.NavbarBtnScroll, {}, [className])}>
+        <HStack max className={classNames(cls.NavbarBtnScroll, {}, [className])}>
             <HStack
-                justify='between'
+                justify='end'
+                max
             >
                 {navbarData.map((el) => (
                     <Link
@@ -45,6 +46,7 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
                             size='size_l'
                         >
                             <Text
+                                link
                                 tag='h4'
                                 title={t(el.title)}
                                 fontWeight='weight_300'

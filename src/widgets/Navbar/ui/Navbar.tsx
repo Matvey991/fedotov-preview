@@ -19,7 +19,7 @@ export const Navbar = memo((props: NavbarProps) => {
     const isMobile = useMediaQuery({ query: '(max-width: 1100px)' })
 
     return (
-        <HStack className={classNames(cls.Navbar, {}, [className])}>
+        <HStack max className={classNames(cls.Navbar, {}, [className])}>
             <HStack
                 gap='4'
                 className={cls.logo}

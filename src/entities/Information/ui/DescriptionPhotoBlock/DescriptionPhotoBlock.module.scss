@@ -1,6 +1,6 @@
 .DescriptionPhotoBlock {
     position: relative;
-    z-index: var(--z-index-description);
+    z-index: 880;
 }
 
 .photo {
@@ -13,7 +13,8 @@
 
 .description {
     position: absolute;
-    z-index: var(--z-index-description);
+    // z-index: var(--z-index-description);
+    z-index: 881;
     padding: 30px 70px;
 
     @media screen and (max-width: 1300px) {

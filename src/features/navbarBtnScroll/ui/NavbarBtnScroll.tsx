@@ -5,18 +5,19 @@ import cls from './NavbarBtnScroll.module.scss'
 import { LangSwitcher } from '@/features/langSwitcher';
 import { ThemeSwitcher } from '@/features/themeSwitcher';
 import { HStack } from '@/shared/ui/Stack';
-import { navbarData } from '@/widgets/Navbar/model/data/navbarData';
 import { Text } from '@/shared/ui/Text';
 import { Button } from '@/shared/ui/Button';
 import { Link } from 'react-scroll';
+import { NavbarBtnType } from '@/entities/Information/ui/ProjectCard/model/types/NavbarBtnType';
 
 interface NavbarBtnScrollProps {
     className?: string;
+    data: NavbarBtnType[];
 }
 
 export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
 
-    const { className } = props
+    const { className, data } = props
     const { t } = useTranslation()
 
     return (
@@ -25,7 +26,7 @@ export const NavbarBtnScroll = memo((props: NavbarBtnScrollProps) => {
                 justify='end'
                 max
             >
-                {navbarData.map((el) => (
+                {data.map((el) => (
                     <Link
                         key={el.href}
                         activeClass="active"

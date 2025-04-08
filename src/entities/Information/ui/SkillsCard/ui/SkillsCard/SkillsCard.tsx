@@ -40,6 +40,7 @@ export const SkillsCard = memo((props: SkillsCardProps) => {
                     onClick={() => onCollapsedHandler(id)}
                 >
                     <Text
+                        theme='outline'
                         link
                         className={cls.title}
                         tag='h2'
@@ -66,6 +67,8 @@ export const SkillsCard = memo((props: SkillsCardProps) => {
                 onClick={() => onCollapsedHandler(-1)}
             >
                 <Text
+                    theme='outline'
+                    link
                     className={cls.title}
                     tag='h2'
                     fontWeight='weight_300'

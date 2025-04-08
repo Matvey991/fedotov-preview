@@ -2,7 +2,7 @@
     background: none;
     position: absolute;
     padding: 50px;
-    z-index: var(--z-index-navbar);
+    z-index: 990;
 
     @media (max-width: 440px) {
         top: 0;

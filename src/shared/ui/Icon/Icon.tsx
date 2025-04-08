@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 import { memo, ReactNode } from 'react';
 
-type IconSize = 'size_s' | 'size_m'
+type IconSize = 'size_s' | 'size_m' | 'size_l'
 type IconTheme = 'white' | 'outline'
 
 interface IconProps {

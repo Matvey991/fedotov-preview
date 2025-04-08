@@ -1,6 +1,6 @@
 import { PreviewType } from '@/shared/types/PreviewType'
 
-export const footerData: PreviewType[] = [
+export const ContactsData: PreviewType[] = [
     {
         text: 'Telegram',
         href: 'https://t.me/Ifedotov',

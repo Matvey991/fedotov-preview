@@ -1,9 +1,9 @@
-.SkillsBlock {
+.ContactsBlock {
+    width: 100%;
     position: relative;
     z-index: var(--z-index-text);
-    padding: 50px 150px;
+    padding: 50px 0;
     background-color: var(--skills-bg-color);
-    width: 100%;
 
     &:hover {
         .hashtag {
@@ -11,15 +11,18 @@
             user-select: none; 
         }
     }
-
-    @media screen and (max-width: 1024px) {
-        width: 100%;
-        padding: 50px;
-    }
 }
 
 .hashtag {
     transition: all 0.2s;
     color: transparent;
     user-select: none; 
+}
+
+.btnWrapper {
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+    };
 }

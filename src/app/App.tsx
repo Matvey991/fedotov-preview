@@ -4,7 +4,7 @@ import './styles/index.scss'
 import { useTheme } from "@/shared/hooks/useTheme/useTheme"
 import { classNames } from "@/shared/lib/classNames/classNames"
 import { Suspense } from "react"
-import { Footer } from "@/widgets/Footer"
+import { ContactsBlock } from "@/features/contactsBlock"
 
 function App() {
 
@@ -15,7 +15,6 @@ function App() {
       <Suspense fallback=''>
         <Navbar />
         <MainPage />
-        <Footer />
       </Suspense>
     </div>
   )

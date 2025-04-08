@@ -1,1 +1,1 @@
-export { EducationBlock } from './ui/EducationBlock'
+export { EducationBlockAsync as EducationBlock } from './ui/EducationBlock/EducationBlock.async'

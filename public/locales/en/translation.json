@@ -83,5 +83,8 @@
     "Глубокое пониманимание асинхронности в js.": "Deep understanding of asynchrony in js.",
     "Уверенно чувствую себя в экосистеме node js.": "I feel confident in the node js ecosystem.",
     "Написать кастомных лоадеров для оптимизации специфических процессов.": "Write custom loaders to optimize specific processes.",
-    "Знание методов оптимизации скорости загрузки сайтов.": "Knowledge of methods for optimizing website loading speed."
+    "Знание методов оптимизации скорости загрузки сайтов.": "Knowledge of methods for optimizing website loading speed.",
+    "Алгоритмы": "Algorithms",
+    "Решаю задачи на Code Wars.": "I solve problems on CodeWars.",
+    "Прохожу курс по алгоритмам от Яндекса.": "I'm taking a course on algorithms from Yandex."
 }

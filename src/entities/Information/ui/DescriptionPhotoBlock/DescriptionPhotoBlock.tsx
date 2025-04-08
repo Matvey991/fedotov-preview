@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
 import cls from './DescriptionPhotoBlock.module.scss'
-import FedotovPhoto from '../../../../shared/assets/2025-04-06 01.56.12.jpg'
+import FedotovPhoto from '@/shared/assets/2025-04-06 01.56.12.jpg'
 import { Text } from '@/shared/ui/Text';
 import { useTranslation } from 'react-i18next';
 import { HStack, VStack } from '@/shared/ui/Stack';
@@ -63,7 +63,6 @@ export const DescriptionPhotoBlock = memo((props: DescriptionPhotoBlockProps) =>
                         <HStack
                             align='center'
                             justify='start'
-                            max
                             key={i}
                         >
                             {el}

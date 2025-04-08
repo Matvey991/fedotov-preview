@@ -1,0 +1,14 @@
+.btnWrapper {
+    // padding: 0 49px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    position: relative;
+    z-index: var(--z-index-navbar);
+}

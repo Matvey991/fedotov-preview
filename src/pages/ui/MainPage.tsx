@@ -4,10 +4,11 @@ import {
     DescriptionPhotoBlock,
 } from '@/entities/Information';
 import { VStack } from '@/shared/ui/Stack';
-import { ProjectsBlock } from '@/features/projectsBlock';
-import { EducationBlock } from '@/features/educationBlock';
 import { ParticlesBg } from '@/entities/Particles';
+import { ProjectsBlock } from '@/features/projectsBlock';
+import { ContactsBlock } from '@/features/contactsBlock';
 import { SkillsBlock } from '@/features/skillsBlock';
+import { EducationBlock } from '@/features/educationBlock';
 
 export const MainPage = memo(() => {
 
@@ -22,6 +23,7 @@ export const MainPage = memo(() => {
             <SkillsBlock />
             <EducationBlock />
             <ParticlesBg />
+            <ContactsBlock />
         </VStack>
     );
 });

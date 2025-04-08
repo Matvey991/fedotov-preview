@@ -1,8 +1,9 @@
-.EducationBlock {
+.SkillsBlock {
     position: relative;
-    color: var(--primary-color);
     z-index: var(--z-index-text);
-    padding: 0 150px;
+    padding: 50px 150px;
+    background-color: var(--skills-bg-color);
+    width: 100%;
 
     &:hover {
         .hashtag {
@@ -10,6 +11,15 @@
             user-select: none; 
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 50px;
+    }
+
+    @media (max-width: 700px ) {
+        padding: 20px 30px;
+    }  
 }
 
 .hashtag {

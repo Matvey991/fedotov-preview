@@ -4,22 +4,24 @@ import { memo } from 'react';
 import cls from './EducationBlock.module.scss'
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import { educationData } from '../model/data/educationData';
-import { SwiperCard } from '@/entities/swiperCard';
+import { educationData } from '../../model/data/educationData';
+import { SwiperCard } from '@/features/swiperCard';
 import { Element } from 'react-scroll';
 
 interface EducationBlockBlockProps {
     className?: string;
 }
 
-export const EducationBlock = memo((props: EducationBlockBlockProps) => {
+const EducationBlock = memo((props: EducationBlockBlockProps) => {
 
     const { className } = props
     const { t } = useTranslation()
     return (
-        <Element name='education'>
+        <Element
+            name='education'
+            className={classNames(cls.EducationBlock, {}, [className])}
+        >
             <VStack
-                className={classNames(cls.EducationBlock, {}, [className])}
                 align='center'
                 justify='center'
                 gap='64'
@@ -30,6 +32,7 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
                     gap='16'
                 >
                     <Text
+                        theme='outline'
                         tag='h2'
                         fontWeight='weight_500'
                         title={t('Обучение')}
@@ -57,3 +60,5 @@ export const EducationBlock = memo((props: EducationBlockBlockProps) => {
         </Element>
     );
 });
+
+export default EducationBlock

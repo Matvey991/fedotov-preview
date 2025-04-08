@@ -1,25 +1,25 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
-import cls from './Footer.module.scss'
+import cls from './ContactsBlock.module.scss'
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { useTranslation } from 'react-i18next';
-import { footerData } from '../model/data/data';
 import { Text } from '@/shared/ui/Text';
 import { ALink } from '@/shared/ui/ALink';
 import { Element } from 'react-scroll';
+import { ContactsData } from '../../model/data/data';
 
 interface FooterProps {
     className?: string;
 }
 
-export const Footer = memo((props: FooterProps) => {
+const ContactsBlock = memo((props: FooterProps) => {
     const { t } = useTranslation()
     const { className } = props
 
     return (
         <Element
             name='contacts'
-            className={classNames(cls.Footer, {}, [className])}
+            className={classNames(cls.ContactsBlock, {}, [className])}
         >
             <VStack
                 gap='64'
@@ -50,7 +50,7 @@ export const Footer = memo((props: FooterProps) => {
                     align='center'
                     className={cls.btnWrapper}
                 >
-                    {footerData.map((el) => (
+                    {ContactsData.map((el) => (
                         <HStack
                             max
                             justify='center'
@@ -77,3 +77,5 @@ export const Footer = memo((props: FooterProps) => {
         </Element>
     );
 });
+
+export default ContactsBlock

@@ -12,7 +12,7 @@ interface ProjectsProps {
     className?: string;
 }
 
-export const ProjectsBlock = memo((props: ProjectsProps) => {
+const ProjectsBlock = memo((props: ProjectsProps) => {
     const { t } = useTranslation()
     const { className } = props
 
@@ -31,6 +31,7 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
                     max
                 >
                     <Text
+                        theme='outline'
                         tag='h2'
                         fontWeight='weight_500'
                         title={t('Проекты')}
@@ -70,3 +71,5 @@ export const ProjectsBlock = memo((props: ProjectsProps) => {
         </Element >
     );
 });
+
+export default ProjectsBlock

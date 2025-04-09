@@ -4,7 +4,6 @@ import './styles/index.scss'
 import { useTheme } from "@/shared/hooks/useTheme/useTheme"
 import { classNames } from "@/shared/lib/classNames/classNames"
 import { Suspense } from "react"
-import { ContactsBlock } from "@/features/contactsBlock"
 
 function App() {
 

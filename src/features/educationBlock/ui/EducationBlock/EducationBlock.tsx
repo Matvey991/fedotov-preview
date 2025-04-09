@@ -35,8 +35,8 @@ const EducationBlock = memo((props: EducationBlockBlockProps) => {
                         theme='outline'
                         tag='h2'
                         fontWeight='weight_500'
-                        title={t('Обучение')}
                         TextSizeType='textBig'
+                        title={t('Обучение')}
                     />
                     <Text
                         tag='h2'

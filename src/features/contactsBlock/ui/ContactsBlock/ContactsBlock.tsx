@@ -32,10 +32,11 @@ const ContactsBlock = memo((props: FooterProps) => {
                     gap='16'
                 >
                     <Text
+                        theme='outline'
                         tag='h2'
                         fontWeight='weight_500'
-                        title={t('Контакты')}
                         TextSizeType='textBig'
+                        title={t('Обучение')}
                     />
                     <Text
                         tag='h2'
@@ -63,6 +64,7 @@ const ContactsBlock = memo((props: FooterProps) => {
                                 target='_blank'
                             >
                                 <Text
+                                    theme='outline'
                                     link
                                     title={el.text}
                                     fontWeight='weight_300'

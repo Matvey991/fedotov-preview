@@ -6,9 +6,9 @@ import {
 import { VStack } from '@/shared/ui/Stack';
 import { ParticlesBg } from '@/entities/Particles';
 import { ProjectsBlock } from '@/features/projectsBlock';
-import { ContactsBlock } from '@/features/contactsBlock';
 import { SkillsBlock } from '@/features/skillsBlock';
 import { EducationBlock } from '@/features/educationBlock';
+import { ContactsBlock } from '@/features/contactsBlock';
 
 export const MainPage = memo(() => {
 

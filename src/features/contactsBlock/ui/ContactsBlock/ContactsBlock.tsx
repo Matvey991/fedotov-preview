@@ -36,7 +36,7 @@ const ContactsBlock = memo((props: FooterProps) => {
                         tag='h2'
                         fontWeight='weight_500'
                         TextSizeType='textBig'
-                        title={t('Обучение')}
+                        title={t('Контакты')}
                     />
                     <Text
                         tag='h2'

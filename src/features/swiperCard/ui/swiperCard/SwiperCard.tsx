@@ -39,7 +39,7 @@ export const SwiperCard = memo((props: SwiperCardProps) => {
                 >
                     <SwiperSlide key={el.link}>
                         <ALink href={el.link} theme='clear_outline' target='_blank'>
-                            <AppImage height={200} src={el.img} />
+                            <img src={el.img} />
                         </ALink>
                     </SwiperSlide>
                 </HStack>

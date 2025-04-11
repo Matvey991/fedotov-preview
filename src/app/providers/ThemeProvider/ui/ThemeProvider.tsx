@@ -3,7 +3,7 @@ import { Theme } from '@/shared/consts/theme';
 import { ThemeContext } from '@/shared/lib/context/ThemeContext';
 import React, { FC, ReactNode, useMemo, useState } from 'react';
 
-const defaultTheme = localStorage.getItem(LOCALSTORAGE_THEME_KEY) as Theme || Theme.LIGHT;
+const defaultTheme = localStorage.getItem(LOCALSTORAGE_THEME_KEY) as Theme || Theme.DARK;
 
 interface ThemeProviderProps {
     children: ReactNode;

@@ -1,8 +1,9 @@
 .EducationBlock {
+    padding: 50px 100px;
+    width: 100%;
     position: relative;
     color: var(--primary-color);
     z-index: var(--z-index-text);
-    padding: 50px 150px;
 
     &:hover {
         .hashtag {
@@ -20,4 +21,42 @@
     transition: all 0.2s;
     color: transparent;
     user-select: none; 
+}
+
+// .EducationBlock {
+//     padding: 48px 98px;
+//     width: 100%;
+//     position: relative;
+//     z-index: var(--z-index-block);
+
+//     @media (max-width: 1400px) {
+//         padding: 28px 0;
+//     }
+
+//     &:hover {
+//         .hashtag {
+//             color: var(--hover-color);
+//             user-select: none; 
+//         }
+//     }
+// }
+
+// .hashtag {
+//     transition: all 0.2s;
+//     color: transparent;
+//     user-select: none; 
+
+//     @media screen and (max-width: 1280px) {
+//         display: none;
+//      }
+// }
+
+.container {
+    max-width: 1200px;
+
+    @media (max-width: 1440px) {
+        width: 100%;
+        height: 200px;
+        padding: 0 5%;
+    }
 }

@@ -13,7 +13,7 @@ interface ThemeSwitcherProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const ThemeSwitcher = memo(({ className, onClick }: ThemeSwitcherProps) => {
-    const { theme, toggleTheme } = useTheme();
+    const { toggleTheme, theme } = useTheme();
 
     const themeHandlerFunc = () => {
         toggleTheme()

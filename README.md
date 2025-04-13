@@ -1,4 +1,4 @@
-## Ссылка на проект: <a href='https://www.fedotov-preview.ru'>fedotov-preview.ru
+## Ссылка на проект: <a target='_blank' href='https://www.fedotov-preview.ru'>fedotov-preview.ru
 
 </a>
 
